@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profile | Qazaq Heritage</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><script src="https://code.jquery.com/jquery-4.0.0.min.js"></script><script src="js/i18n.js" defer></script><script src="js/script.js" defer></script></head><body><nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top qh-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+          <img src="images/brand-logo.png" alt="Qazaq Heritage emblem" class="brand-logo me-2">
+          <span>Qazaq Heritage</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#qhNavbar" aria-controls="qhNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="qhNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="heritage.html">Heritage Explorer</a></li><li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li><li class="nav-item"><a class="nav-link" href="map.html">Interactive Map</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li><li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="profile.html">Profile</a></li></ul>
+          <div class="qh-global-controls d-flex align-items-center gap-2 ms-lg-2 mt-2 mt-lg-0">
+            <button id="themeToggleBtn" class="btn btn-sm btn-outline-light" type="button" aria-pressed="false" aria-label="Switch color theme" title="Switch color theme"><span class="qh-theme-icon" aria-hidden="true">☾</span></button>
+            <button id="interfaceSoundsToggleBtn" class="btn btn-sm btn-outline-light" type="button" aria-pressed="false" aria-label="Toggle interface sounds" title="Toggle interface sounds"><span class="qh-sound-icon" aria-hidden="true">♬</span></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+<main class="container py-5 profile-page">
+  <header class="text-center mb-4 profile-hero">
+    <p class="text-uppercase small fw-bold text-primary mb-2">Your Qazaq Heritage account</p>
+    <h1 class="display-5 fw-bold">Your Profile</h1>
+    <p class="lead text-muted">Create an account or sign in to save your place in the heritage journey.</p>
+  </header>
+  <div class="row g-4 align-items-stretch justify-content-center">
+    <div class="col-lg-4">
+      <aside class="profile-benefits h-100 p-4 rounded-4">
+        <div class="profile-emblem mb-3" aria-hidden="true">✦</div>
+        <h2 class="h4 fw-bold">Your heritage space</h2>
+        <p>Use a demo account to access your profile on this browser.</p>
+        <ul class="profile-benefit-list">
+          <li>Manage your local demo account</li>
+          <li>Update your display name</li>
+          <li>Return to your cultural discoveries</li>
+        </ul>
+        <div class="profile-quick-links d-grid gap-2 mt-4">
+          <a class="btn btn-light" href="heritage.html">Explore heritage sites <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline-light" href="map.html">Open interactive map <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="small profile-demo-note mt-4 mb-0">Demo account for this browser only. Do not use a real password.</p>
+      </aside>
+    </div>
+    <div class="col-lg-7">
+      <section id="authPanel" class="card profile-auth-card border-0 shadow-sm">
+        <div class="card-body p-4 p-lg-5">
+          <ul class="nav nav-pills nav-fill mb-4" role="tablist">
+            <li class="nav-item"><button class="nav-link active" id="signupTab" type="button">Create account</button></li>
+            <li class="nav-item"><button class="nav-link" id="loginTab" type="button">Sign in</button></li>
+          </ul>
+          <form id="signupForm" novalidate>
+            <h2 class="h4 fw-bold mb-1">Join Qazaq Heritage</h2>
+            <p class="text-muted mb-4">Enter your details to create a local demo account.</p>
+            <div class="mb-3"><label class="form-label" for="signupName">Full name</label><input class="form-control" id="signupName" type="text" autocomplete="name"><div class="invalid-feedback"></div></div>
+            <div class="mb-3"><label class="form-label" for="signupEmail">Email address</label><input class="form-control" id="signupEmail" type="text" autocomplete="email"><div class="invalid-feedback"></div></div>
+            <div class="mb-3"><label class="form-label" for="signupPassword">Password</label><input class="form-control" id="signupPassword" type="password" autocomplete="new-password"><div class="form-text">At least 8 characters, including a letter and a number.</div><div class="invalid-feedback"></div></div>
+            <button class="btn btn-primary btn-lg w-100" type="submit">Create my account</button>
+            <p id="signupStatus" class="small mt-3 mb-0" role="status" aria-live="polite"></p>
+          </form>
+          <form id="loginForm" class="d-none" novalidate>
+            <h2 class="h4 fw-bold mb-1">Welcome back</h2>
+            <p class="text-muted mb-4">Sign in with the account created in this browser.</p>
+            <div class="mb-3"><label class="form-label" for="loginEmail">Email address</label><input class="form-control" id="loginEmail" type="text" autocomplete="email"><div class="invalid-feedback"></div></div>
+            <div class="mb-3"><label class="form-label" for="loginPassword">Password</label><input class="form-control" id="loginPassword" type="password" autocomplete="current-password"><div class="invalid-feedback"></div></div>
+            <button class="btn btn-primary btn-lg w-100" type="submit">Sign in</button>
+            <p id="loginStatus" class="small mt-3 mb-0" role="status" aria-live="polite"></p>
+          </form>
+          <div id="profilePanel" class="d-none">
+            <div class="profile-avatar mb-3" aria-hidden="true">QH</div>
+            <p class="text-uppercase small fw-bold text-primary mb-2">Signed in</p>
+            <h2 class="h3 fw-bold">Welcome, <span id="profileName"></span></h2>
+            <p class="text-muted">Your local Qazaq Heritage demo profile is active.</p>
+            <p id="profileStatus" class="small text-success mb-0" role="status" aria-live="polite"></p>
+            <dl class="profile-details row mt-4">
+              <dt class="col-sm-3">Name</dt><dd class="col-sm-9" id="profileNameDetail"></dd>
+              <dt class="col-sm-3">Email</dt><dd class="col-sm-9" id="profileEmail"></dd>
+            </dl>
+            <div class="profile-account-meta mt-3">
+              <span class="small text-muted">Account type: Local demo account</span>
+              <span class="small text-muted d-block">Member since <strong id="profileMemberSince">This session</strong></span>
+            </div>
+            <div class="profile-actions d-flex flex-wrap gap-2 mt-4">
+              <button id="editProfileBtn" class="btn btn-outline-primary" type="button">Edit display name</button>
+              <button id="logoutBtn" class="btn btn-outline-danger" type="button">Sign out</button>
+            </div>
+            <form id="editProfileForm" class="d-none mt-3" novalidate>
+              <label class="form-label" for="editProfileName">Display name</label>
+              <input class="form-control mb-2" id="editProfileName" type="text" autocomplete="name">
+              <div class="invalid-feedback mb-2"></div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-primary" type="submit">Save changes</button>
+                <button id="cancelProfileEdit" class="btn btn-outline-secondary" type="button">Cancel</button>
+              </div>
+              <p id="editProfileStatus" class="small mt-2 mb-0" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+<section class="qh-date-time text-center border-top" aria-label="Page settings"><div class="qh-clock-details"><button class="qh-clock-toggle" type="button" aria-expanded="false" aria-controls="dateTimePanel"><span aria-hidden="true">◷</span><span>Show date &amp; time</span></button><div class="qh-clock-face" id="dateTimePanel" hidden><span id="dateTimeDisplay" class="fw-semibold">Loading time…</span></div></div></section><footer class="py-4 bg-dark text-white text-center mt-5"><div class="container"><p class="mb-0">&copy; 2026 Qazaq Heritage. Group SE-2504.</p><small class="text-white-50">Created by Toleumuratova Aisamal and Absultanov Nurdaulet</small></div></footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="js/profile.js"></script><script src="js/clock.js"></script></body></html>
