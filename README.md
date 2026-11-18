@@ -75,4 +75,4 @@ Then open the server address shown in the terminal or `http://127.0.0.1:8000/` f
 
 [View the Qazaq Heritage GitHub repository](https://github.com/Absultanov-N/Qazaq_Heritage)
 
-GitHub Pages deployment has not been verified, so this README does not present a Pages URL as a live website.
+The project is uploaded to the `main` branch at the repository above. GitHub Pages was not enabled/verified, so this README does not present a Pages URL as live.

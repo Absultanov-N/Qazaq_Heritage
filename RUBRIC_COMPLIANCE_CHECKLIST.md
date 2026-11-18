@@ -23,7 +23,8 @@ The official Final Project Requirements document was not present in the project 
 | Contact form | PASS | Inline browser validation and demo success feedback are implemented. |
 | Copy Site Link and repository link | PASS | Copy text and repository URL were inspected; clipboard success on HTTP is browser/permission dependent. |
 | GitHub repository structure | PASS | Required HTML, CSS, JS, images, audio, and README are in the project root. |
-| GitHub Pages publication | NOT VERIFIED | No write access or live deployment confirmation was available. |
+| GitHub repository publication | PASS | Complete project was pushed to the `main` branch. |
+| GitHub Pages publication | FAIL / NOT VERIFIED | Opening the expected Pages URL returned 404; Pages has not been enabled or confirmed. |
 | Clean final ZIP | PASS | A dedicated final ZIP will be created after backup cleanup and extracted for verification. |
 | Original backup ZIP | PARTIAL | A backup ZIP existed inside the source folder and will be separated outside the final archive. |
 | Backend/security claims | PASS | Reports explicitly state that profile and forms are front-end demonstrations. |

@@ -72,7 +72,7 @@ The project includes an English/Kazakh/Russian interface dictionary and persists
 - Horizontal overflow measured at all requested widths.
 - Local asset reference existence checked.
 
-The following were NOT VERIFIED: publication on GitHub Pages, live external-CDN availability in every browser/network, audio playback for every track, final real-device testing, and compatibility with every browser version.
+The following were NOT VERIFIED: live external-CDN availability in every browser/network, audio playback for every track, final real-device testing, and compatibility with every browser version.
 
 ## 14. GitHub repository
 
@@ -80,7 +80,7 @@ https://github.com/Absultanov-N/Qazaq_Heritage
 
 ## 15. GitHub Pages
 
-NOT VERIFIED. No deployed URL was opened and confirmed in this environment. The Home page uses the expected Pages address only as the intended public address and does not claim it is live.
+NOT LIVE / NOT VERIFIED. The project was uploaded to the repository `main` branch, but opening https://absultanov-n.github.io/Qazaq_Heritage/ returned GitHub Pages "Site not found" (404). GitHub Pages has not been enabled or confirmed.
 
 ## 16. Known limitations
 
